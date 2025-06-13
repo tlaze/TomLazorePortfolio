@@ -33,10 +33,10 @@
     ></textarea>
     <button
       type="submit"
-      [disabled]="!name || !email || !message"
+      [disabled]="!name || !email || !message || sending"
       class="w-full bg-blue-600 text-white py-3 rounded-lg shadow hover:bg-blue-700 transition disabled:opacity-50"
     >
-      Send Message
+      {{ sending ? 'Sending…' : 'Send Message' }}
     </button>
   </form>
 </section>
