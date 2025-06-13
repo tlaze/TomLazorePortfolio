@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  @keyframes marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-marquee {
+    animation: marquee 20s linear infinite;
+  }
+}
 @layer base {
   /* Default text */
   body {
@@ -16,4 +25,19 @@
   h1, h2, h3, h4, h5, h6, p, a, li {
     @apply text-gray-800 dark:text-gray-200;
   }
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+section#about,
+section#projects {
+  scroll-snap-align: start;
+}
+
+section#skills,
+section#contact,
+section#footer {
+  scroll-snap-align: none;
 }

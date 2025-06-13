@@ -1,45 +1,24 @@
 <section
   id="skills"
-class="h-screen bg-white flex flex-col items-center justify-center
-scroll-snap-align-start bg-white dark:bg-gray-800"
+  class="h-[35vh] bg-gray-100 dark:bg-gray-800 flex flex-col items-center justify-center px-4"
 >
-  <h3 class="text-4xl font-semibold mb-8">Tech Stack</h3>
-  <div class="flex flex-wrap justify-center gap-8">
-    <!-- Angular -->
-    <div class="flex flex-col items-center">
-      <img
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
-        alt="Angular"
-        class="w-16 h-16 mb-2"
-      />
-      <span class="text-gray-700">Angular</span>
-    </div>
-    <!-- Node.js -->
-    <div class="flex flex-col items-center">
-      <img
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-        alt="Node.js"
-        class="w-16 h-16 mb-2"
-      />
-      <span class="text-gray-700">Node.js</span>
-    </div>
-    <!-- Tailwind CSS -->
-    <div class="flex flex-col items-center">
-      <img
-        src="https://cdn.simpleicons.org/Tailwindcss"
-        alt="Tailwind CSS"
-        class="w-16 h-16 mb-2"
-      />
-      <span class="text-gray-700">Tailwind CSS</span>
-    </div>
-    <!-- AWS -->
-    <div class="flex flex-col items-center">
-      <img
-        src="https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.16.0/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
-        alt="AWS"
-        class="w-16 h-16 mb-2"
-      />
-      <span class="text-gray-700">AWS</span>
+  <h3 class="text-4xl font-semibold mb-8">Skills</h3>
+  <div class="w-full overflow-hidden">
+    <div class="flex whitespace-nowrap animate-marquee">
+
+      <ng-container *ngFor="let tech of techs">
+        <div class="inline-flex flex-col items-center w-32 mx-8">
+          <img [src]="tech.src" [alt]="tech.name" class="w-16 h-16 mb-2" />
+          <span class="text-gray-700 dark:text-gray-300">{{ tech.name }}</span>
+        </div>
+      </ng-container>
+
+      <ng-container *ngFor="let tech of techs">
+        <div class="inline-flex flex-col items-center w-32 mx-8">
+          <img [src]="tech.src" [alt]="tech.name" class="w-16 h-16 mb-2" />
+          <span class="text-gray-700 dark:text-gray-300">{{ tech.name }}</span>
+        </div>
+      </ng-container>
     </div>
   </div>
 </section>
