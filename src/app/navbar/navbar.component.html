@@ -1,8 +1,8 @@
-<nav class="bg-white shadow-md sticky top-0 z-50">
+<nav class="bg-white shadow-md sticky top-0 z-50 bg-white dark:bg-gray-600">
   <div class="container mx-auto flex items-center justify-between py-4 px-6">
     <!-- Branding/Logo -->
     <a href="#" class="text-2xl font-extrabold text-gray-800">
-      Tom Lazore
+      Tom Lazore - Software Developer
     </a>
 
     <!-- Links -->
@@ -47,6 +47,16 @@
         >
           Resume
         </a>
+      </li>
+      <li>
+        <button
+          (click)="toggleDarkMode()"
+          class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+          aria-label="Toggle dark mode"
+        >
+          <span *ngIf="!isDark">🌙</span>
+          <span *ngIf=" isDark">☀️</span>
+        </button>
       </li>
     </ul>
   </div>

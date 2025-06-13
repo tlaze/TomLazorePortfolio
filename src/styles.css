@@ -2,13 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  /* Default text */
+  body {
+    @apply text-gray-800;
+  }
+  /* Dark mode text */
+  body.dark {
+    @apply text-gray-200;
+  }
 
-html {
-  scroll-behavior: smooth;
-}
-
-
-/* Scroll-snap container utility */
-.scroll-snap-y-mandatory {
-  scroll-snap-type: y mandatory;
+  /* Optionally, override headings/paragraphs too */
+  h1, h2, h3, h4, h5, h6, p, a, li {
+    @apply text-gray-800 dark:text-gray-200;
+  }
 }
