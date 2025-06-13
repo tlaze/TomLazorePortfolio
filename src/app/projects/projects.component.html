@@ -1,0 +1,16 @@
+<section
+  id="projects"
+  class="h-screen bg-gray-50 flex flex-col items-center py-12 scroll-snap-align-start"
+>
+  <h3 class="text-4xl font-semibold mb-8">Projects</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl px-4 items-stretch">
+    <app-project-card
+      *ngFor="let project of projects"
+      [title]="project.title"
+      [description]="project.description"
+      [imageUrl]="project.imageUrl"
+      [demoUrl]="project.demoUrl"
+      [repoUrl]="project.repoUrl"
+    ></app-project-card>
+  </div>
+</section>
