@@ -9,8 +9,8 @@
     "build": "ng build --configuration=production",
     "watch": "ng build --watch --configuration=development",
     "test": "ng test",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist/tom-lazore-portfolio"
+    "predeploy": "npm run build -- --configuration=production --base-href /TomLazorePortfolio/",
+    "deploy":   "gh-pages -d dist/TomLazorePortfolio/browser"
   },
   "dependencies": {
     "@angular/animations": "^17.3.0",
