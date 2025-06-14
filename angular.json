@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "tom-lazore-portfolio": {
+    "TomLazorePortfolio": {
       "projectType": "application",
       "schematics": {},
       "root": "",

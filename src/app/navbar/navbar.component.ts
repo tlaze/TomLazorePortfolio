@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+  mobileMenuOpen = false;
   isDark = false;
 
   constructor(private renderer: Renderer2) {}
