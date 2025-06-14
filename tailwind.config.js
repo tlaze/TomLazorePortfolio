@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       animation: {
         // creates a class `animate-spin-slow`
-        'spin-slow': 'spin 20s linear infinite',
+        'marquee-fast': 'marquee 2s linear infinite', 
       },
     }
   },

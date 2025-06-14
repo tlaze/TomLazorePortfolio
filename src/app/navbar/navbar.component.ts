@@ -6,22 +6,22 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
   mobileMenuOpen = false;
   isDark = false;
 
   constructor(private renderer: Renderer2) {}
 
-  toggleDarkMode() {
-    this.isDark = !this.isDark;
-    localStorage.setItem('theme', this.isDark ? 'dark' : 'light');
+  ngOnInit() {
+    this.isDark = localStorage.getItem('theme') === 'dark';
     this.updateBodyClass();
   }
 
-  ngOnInit() {
-    this.isDark = localStorage.getItem('theme') === 'dark';
+  toggleDarkMode() {
+    this.isDark = !this.isDark;
+    localStorage.setItem('theme', this.isDark ? 'dark' : 'light');
     this.updateBodyClass();
   }
 
@@ -30,6 +30,19 @@ export class NavbarComponent {
       this.renderer.addClass(document.body, 'dark');
     } else {
       this.renderer.removeClass(document.body, 'dark');
+    }
+  }
+
+  scrollTo(sectionId: string) {
+    const container = document.getElementById('scrollContainer');
+    const section   = document.getElementById(sectionId);
+    const nav       = document.querySelector('nav');
+    if (container && section && nav) {
+      const navHeight = nav.clientHeight;
+      // section.offsetTop is relative to the container’s top if container is the offsetParent
+      const targetY = section.offsetTop - navHeight;
+      container.scrollTo({ top: targetY, behavior: 'smooth' });
+      this.mobileMenuOpen = false;
     }
   }
 }
