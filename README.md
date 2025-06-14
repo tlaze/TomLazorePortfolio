@@ -1,28 +1,75 @@
-# TomLazorePortfolio
+# Tom Lazore Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.9.
+[Live Application](https://tlaze.github.io/TomLazorePortfolio/)
 
-## Development server
+A sleek, mobile‑friendly Single‑Page Application built with Angular and Tailwind CSS to showcase my skills, projects, and background as a Full‑Stack Software Engineer.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## 🚀 Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* **Responsive Design**: Mobile‑first layout with a collapsible hamburger navbar, smooth scroll‑snap sections, and dark/light mode toggle.
+* **Hero & About**: Friendly introduction with profile picture and concise bio highlighting experience at Accenture, Tech Mahindra, and Verizon.
+* **Skills Carousel**: Seamless infinite marquee of all core technologies (Angular, React, Node.js, Java, Spring, AWS, Azure, Docker, Python, etc.).
+* **Projects Showcase**: Uniform responsive cards with live demo and GitHub links, powered by Angular standalone components.
+* **Contact Form**: Built‑in form using EmailJS to send messages directly to my inbox with form validation and user feedback.
+* **Resume Download**: One‑click PDF download of my résumé directly from the navbar.
+* **CI/CD**: GitHub Actions workflow auto‑deploys to GitHub Pages on each `main` commit.
 
-## Build
+## 🛠 Tech Stack
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+* **Frontend**: Angular (standalone components), Tailwind CSS, TypeScript, HTML5
+* **Backend (API)**: EmailJS for client‑side email delivery
+* **DevOps**: GitHub Actions, GitHub Pages
+* **Other Tools**: ESLint, Prettier, npm, gh‑pages
 
-## Running unit tests
+## 📦 Installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. **Clone the repo**
 
-## Running end-to-end tests
+   ```bash
+   git clone https://github.com/tlaze/TomLazorePortfolio.git
+   cd TomLazorePortfolio
+   ```
+2. **Install dependencies**
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+   ```bash
+   npm install
+   ```
+3. **Run locally**
 
-## Further help
+   ```bash
+   npm start
+   ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# portfolio-angular
+   Then open [http://localhost:4200](http://localhost:4200) in your browser.
+
+## 📁 Build & Deploy
+
+* **Build for production**
+
+  ```bash
+  npm run build
+  ```
+
+  Compiles the app into `dist/tom-lazore-portfolio/`.
+
+* **Deploy to GitHub Pages**
+
+  ```bash
+  npm run deploy
+  ```
+
+  Automatically builds and publishes to the `gh-pages` branch.
+
+## 🤝 Contributing
+
+Contributions and feedback are welcome! Feel free to open an issue or submit a pull request.
+
+## 📄 License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+---
+
+© 2025 Tom Lazore. All rights reserved.
