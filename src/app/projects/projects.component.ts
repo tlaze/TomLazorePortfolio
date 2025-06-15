@@ -25,7 +25,7 @@ export class ProjectsComponent {
       title: 'Over 40 Fitness Hacks',
       description: 'A streamlined appointment booking site for fitness sessions, built with GoHighLevel and styled using CSS. Designed with an intuitive user experience, the site simplifies client scheduling and is deployed on a HostGator-registered domain to ensure speed, reliability, and performance.',
       imageUrl: 'assets/images/fitness.png',
-      demoUrl: 'https://your-fitness-domain.com', // Replace with actual URL if available
+      demoUrl: 'https://over40fitnesshacks.com/home',
       repoUrl: 'https://app.gohighlevel.com/'
     },
     {

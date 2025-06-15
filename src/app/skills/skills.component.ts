@@ -40,7 +40,7 @@ export class SkillsComponent implements AfterViewInit {
       const delta = now - lastTime;
       lastTime = now;
       container.scrollLeft += (speed * delta) / 1000;
-      // When we've scrolled half the scrollWidth (one full set), jump back
+
       if (container.scrollLeft >= container.scrollWidth / 2) {
         container.scrollLeft -= container.scrollWidth / 2;
       }
