@@ -1,14 +1,17 @@
 {
   "name": "tom-lazore-portfolio",
   "version": "0.0.0",
+  "private": true,
+  "homepage": "https://tlaze.github.io/TomLazorePortfolio/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "build": "ng build --configuration=production",
+    "watch": "ng build --watch --configuration=development",
+    "test": "ng test",
+    "predeploy": "npm run build -- --configuration=production --base-href /TomLazorePortfolio/",
+    "deploy":   "gh-pages -d dist/TomLazorePortfolio/browser"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^17.3.0",
     "@angular/common": "^17.3.0",
@@ -29,6 +32,7 @@
     "@angular/compiler-cli": "^17.3.0",
     "@types/jasmine": "~5.1.0",
     "autoprefixer": "^10.4.21",
+    "gh-pages": "^6.3.0",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",

@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 
 @Component({
   selector: 'app-skills',
@@ -9,7 +8,8 @@ import { CommonModule } from '@angular/common';
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.css'
 })
-export class SkillsComponent {
+export class SkillsComponent implements AfterViewInit {
+  @ViewChild('marquee', { static: true }) marquee!: ElementRef<HTMLDivElement>;
 
   techs = [
     { name: 'Angular',      src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg' },
@@ -29,4 +29,24 @@ export class SkillsComponent {
     { name: 'OpenAI',       src: 'https://cdn.simpleicons.org/OpenAI' },
     { name: 'Docker',       src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
   ];
+
+    ngAfterViewInit() {
+    const container = this.marquee.nativeElement;
+    // Scroll speed in pixels per second
+    const speed = 100;
+    let lastTime = performance.now();
+
+    const step = (now: number) => {
+      const delta = now - lastTime;
+      lastTime = now;
+      container.scrollLeft += (speed * delta) / 1000;
+      // When we've scrolled half the scrollWidth (one full set), jump back
+      if (container.scrollLeft >= container.scrollWidth / 2) {
+        container.scrollLeft -= container.scrollWidth / 2;
+      }
+      requestAnimationFrame(step);
+    };
+
+    requestAnimationFrame(step);
+  }
 }
