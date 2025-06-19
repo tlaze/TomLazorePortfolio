@@ -15,6 +15,13 @@ import { ProjectCardComponent } from '../project-card/project-card.component';
 export class ProjectsComponent {
   projects = [
     {
+      title: 'Book Manager',
+      description: 'A responsive, frontend-only React app built with TypeScript, Vite, and Material-UI that fetches book data from the Open Library API and stores it in memory. Users can add new books by entering an OLID, sort and view them in a dynamic card layout, and edit any book’s title, author, publication date, or description. The entire list is persisted in localStorage for seamless page reloads, and the interface includes a friendly empty state and full mobile responsiveness.',
+      imageUrl: 'assets/images/witches.png',
+      demoUrl: 'https://book-manager-x.netlify.app/',
+      repoUrl: 'https://github.com/tlaze/xtivia-book-app'
+    },
+    {
       title: 'Witches Village Cafe',
       description: 'A customer-facing website built with Angular for Witches Village Cafe. It features a curated menu, intuitive navigation, and a user-friendly interface optimized for performance and accessibility. The site includes location/contact info, integrated social media links, and a clean design that encourages in-person visits and community engagement.',
       imageUrl: 'assets/images/witches.png',
