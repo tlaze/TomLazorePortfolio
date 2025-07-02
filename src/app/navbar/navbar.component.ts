@@ -34,14 +34,9 @@ export class NavbarComponent implements OnInit {
   }
 
   scrollTo(sectionId: string) {
-    const container = document.getElementById('scrollContainer');
-    const section   = document.getElementById(sectionId);
-    const nav       = document.querySelector('nav');
-    if (container && section && nav) {
-      const navHeight = nav.clientHeight;
-      // section.offsetTop is relative to the container’s top if container is the offsetParent
-      const targetY = section.offsetTop - navHeight;
-      container.scrollTo({ top: targetY, behavior: 'smooth' });
+    const el = document.getElementById(sectionId);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
       this.mobileMenuOpen = false;
     }
   }

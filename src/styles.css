@@ -2,28 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  /* Global background & text */
+  body {
+    @apply bg-gray-50 text-gray-800;
+  }
+  body.dark {
+    @apply bg-gray-900 text-gray-200;
+  }
+
+  /* Make all headings, paragraphs, links, list items flip colors */
+  h1, h2, h3, h4, h5, h6,
+  p, a, li {
+    @apply text-gray-800 dark:text-gray-200;
+  }
+}
+
 @layer utilities {
   @keyframes marquee {
     0%   { transform: translateX(0); }
     100% { transform: translateX(-50%); }
   }
-  .animate-marquee {
-    animation: marquee 20s linear infinite;
-  }
-}
-@layer base {
-  /* Default text */
-  body {
-    @apply text-gray-800;
-  }
-  /* Dark mode text */
-  body.dark {
-    @apply text-gray-200;
-  }
 
-  /* Optionally, override headings/paragraphs too */
-  h1, h2, h3, h4, h5, h6, p, a, li {
-    @apply text-gray-800 dark:text-gray-200;
+  .animate-marquee {
+    animation: marquee 10s linear infinite; /* speed up as desired */
   }
 }
 
@@ -31,12 +33,7 @@ html {
   scroll-snap-type: y mandatory;
 }
 
-
-#scrollContainer::-webkit-scrollbar {
-  width: 0;       /* for Chrome, Safari, Opera */
-  background: transparent;
-}
-#scrollContainer {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
+section {
+  scroll-snap-align: start;
+  scroll-margin-top: 4rem;
 }
