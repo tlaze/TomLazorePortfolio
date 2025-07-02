@@ -31,13 +31,12 @@ html {
   scroll-snap-type: y mandatory;
 }
 
-section#about,
-section#projects {
-  scroll-snap-align: start;
-}
 
-section#skills,
-section#contact,
-section#footer {
-  scroll-snap-align: none;
+#scrollContainer::-webkit-scrollbar {
+  width: 0;       /* for Chrome, Safari, Opera */
+  background: transparent;
+}
+#scrollContainer {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
 }
