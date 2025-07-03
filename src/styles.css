@@ -26,18 +26,8 @@
     @apply text-gray-800 dark:text-gray-200;
   }
 }
-
-html {
-  scroll-snap-type: y mandatory;
+html, body {
+  height: 100%;
+  overflow-y: auto;
 }
 
-section#about,
-section#projects {
-  scroll-snap-align: start;
-}
-
-section#skills,
-section#contact,
-section#footer {
-  scroll-snap-align: none;
-}
