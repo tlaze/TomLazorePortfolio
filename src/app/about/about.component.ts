@@ -8,18 +8,13 @@ import { Component } from '@angular/core';
   styleUrl: './about.component.css'
 })
 export class AboutComponent {
+  
   scrollTo(sectionId: string) {
-    const section = document.getElementById(sectionId);
-    const nav = document.querySelector('nav');
-
-    if (section && nav) {
-      const navHeight = nav.clientHeight;
-      const offsetTop = section.getBoundingClientRect().top + window.scrollY - navHeight;
-
-      window.scrollTo({
-        top: offsetTop,
-        behavior: 'smooth',
-      });
-    }
+    requestAnimationFrame(() => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
   }
 }
