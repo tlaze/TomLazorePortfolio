@@ -11,6 +11,7 @@ export class ProjectCardComponent {
   @Input() title!: string;
   @Input() description!: string;
   @Input() imageUrl!: string;
-  @Input() demoUrl!: string;
+  @Input() demoUrl?: string;
+  @Input() videoUrl?: string; 
   @Input() repoUrl!: string;
 }

@@ -15,6 +15,20 @@ import { ProjectCardComponent } from '../project-card/project-card.component';
 export class ProjectsComponent {
   projects = [
     {
+      title: 'POS Kiosk App',
+      description: 'A responsive Vue 3 application built with Vite, Tailwind CSS, and Pinia that allows customers to browse a dynamic menu, add items to their cart, and simulate payments with validation. Upon checkout, orders are submitted in real time to a kitchen dashboard via WebSocket. The app uses localStorage to persist the cart state and includes smooth page transitions, mobile-optimized layouts, and basic input validation.',
+      imageUrl: 'assets/images/pos-kiosk.png',
+      videoUrl: 'assets/videos/pos-demo.mp4',
+      repoUrl: 'https://github.com/tlaze/pos-project'
+    },
+    {
+      title: 'Kitchen Dashboard App',
+      description: 'A Vue 3 admin dashboard styled with Tailwind CSS that receives real-time orders from the POS Kiosk app via WebSocket. Orders are stored in localStorage for persistence and organized into "pending" and "completed" views. Staff can mark items as completed, view timestamps, and send items back to the kitchen if needed. Includes an analytics tab powered by Chart.js to visualize the most frequently ordered items.',
+      imageUrl: 'assets/images/kitchen-dashboard.png',
+      videoUrl: 'assets/videos/kitchen-dashboard-demo.mp4',
+      repoUrl: 'https://github.com/tlaze/kitchen-dashboard'
+    },
+    {
       title: 'Book Manager',
       description: 'A responsive, frontend-only React app built with TypeScript, Vite, and Material-UI that fetches book data from the Open Library API and stores it in memory. Users can add new books by entering an OLID, sort and view them in a dynamic card layout, and edit any book’s title, author, publication date, or description. The entire list is persisted in localStorage for seamless page reloads, and the interface includes a friendly empty state and full mobile responsiveness.',
       imageUrl: 'assets/images/book.png',
@@ -43,13 +57,6 @@ export class ProjectsComponent {
       repoUrl: 'https://github.com/tlaze/threejs-Audio-Visualizer-Orb'
     },
     {
-      title: 'Tech Blog',
-      description: 'A full-stack CMS-style blog site where developers can publish articles, edit posts, and engage with comments. Built with Node.js, Express, Handlebars, and Sequelize using a MySQL database. Features user authentication, post management, and dynamic content rendering.',
-      imageUrl: 'assets/images/tech-blog-pic.png',
-      demoUrl: 'https://toms-tech-blog-e89407441940.herokuapp.com/',
-      repoUrl: 'https://github.com/tlaze/tech-blog'
-    },
-    {
       title: 'Power Outage Tracker',
       description: 'A Progressive Web App for reporting and monitoring power outages in real-time. Built with Angular, NestJS, Tailwind CSS, and PostgreSQL, this full-stack application allows users to submit outage reports, view active issues, and work offline. Designed for utility teams requiring 24/7 reliability and rapid response tools.',
       imageUrl: 'assets/images/PowerOutageTracker.png',
@@ -60,8 +67,15 @@ export class ProjectsComponent {
       title: 'Weather App',
       description: 'Weather app using the OpenWeather API to display daily, hourly, and weekly forecasts. Users can sign up to access search history and save favorite locations. Combines real-time weather data with a personalized experience.',
       imageUrl: 'assets/images/weatherapp.png',
-      demoUrl: 'https://tlaze.github.io/weather-dashboard/',
+      videoUrl: 'assets/videos/weather-demo.mp4',
       repoUrl: 'https://github.com/tlaze/weather-channel-program?tab=readme-ov-file'
+    },
+    {
+      title: 'Tech Blog',
+      description: 'A full-stack CMS-style blog site where developers can publish articles, edit posts, and engage with comments. Built with Node.js, Express, Handlebars, and Sequelize using a MySQL database. Features user authentication, post management, and dynamic content rendering.',
+      imageUrl: 'assets/images/tech-blog-pic.png',
+      demoUrl: 'https://toms-tech-blog-e89407441940.herokuapp.com/',
+      repoUrl: 'https://github.com/tlaze/tech-blog'
     },
   ];
 }
