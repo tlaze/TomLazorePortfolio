@@ -15,6 +15,13 @@ import { ProjectCardComponent } from '../project-card/project-card.component';
 export class ProjectsComponent {
   projects = [
     {
+      title: 'Greenwich Youth Football',
+      description: 'A full-stack registration platform built with Angular and NestJS for the Greenwich Youth Football. The site features a complete player registration form with file uploads, automated email notifications to league administration via the Resend API, and a Stripe payment integration ready to activate upon approval. Built as an Nx monorepo with shared TypeScript types between frontend and backend, deployed on Vercel and Railway with a custom GoDaddy domain.',
+      imageUrl: 'assets/images/greenwichyouthfootball.png',
+      demoUrl: 'https://www.greenwichyouthfootball.com/',
+      repoUrl: 'https://github.com/tlaze/greenwich-football/tree/main'
+    },
+    {
       title: 'POS Kiosk App',
       description: 'A responsive Vue 3 application built with Vite, Tailwind CSS, and Pinia that allows customers to browse a dynamic menu, add items to their cart, and simulate payments with validation. Upon checkout, orders are submitted in real time to a kitchen dashboard via WebSocket. The app uses localStorage to persist the cart state and includes smooth page transitions, mobile-optimized layouts, and basic input validation.',
       imageUrl: 'assets/images/pos-kiosk.png',
